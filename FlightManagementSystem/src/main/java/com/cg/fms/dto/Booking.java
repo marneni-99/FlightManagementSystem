@@ -15,11 +15,11 @@ import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-@Entity
-@Table(name="bookingdetails")
+@Entity  
+@Table(name="bookingdetails")//creating database table from here with the table name bookingdetails
 public class Booking {
-	@Id
-	@Column(name="booking_id")
+	@Id  //primary key
+	@Column(name="booking_id")//creating column for the table bookingdetails
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="book_seq")
 	@SequenceGenerator(name="book_seq",sequenceName="bookingdetails_s1",allocationSize=1)
 	long bookingId;
