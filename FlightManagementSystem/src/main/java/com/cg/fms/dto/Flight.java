@@ -12,25 +12,25 @@ public class Flight
     String flightNo;
     @Column(name="carrier_name",length=15)
     String carrierName;
-    @Column(name="flight_model",length=15)
-    String flightModel;
+    //@Column(name="flight_model",length=15)
+    //String flightModel;
 	@Column(name="seat_capacity",length=10)
     int seatCapacity;
     public Flight() { }
     
-	public Flight(String flightNo, String carrierName, String flightModel, int seatCapacity) {
+	public Flight(String flightNo, String carrierName, int seatCapacity) {
 		super();
 		this.flightNo = flightNo;
 		this.carrierName = carrierName;
-		this.flightModel = flightModel;
+		//this.flightModel = flightModel;
 		this.seatCapacity = seatCapacity;
 	}
-	public String getFlightModel() {
+	/*public String getFlightModel() {
 		return flightModel;
 	}
 	public void setFlightModel(String flightModel) {
 		this.flightModel = flightModel;
-	}
+	}*/
 	public String getFlightNo() {
 		return flightNo;
 	}
@@ -51,7 +51,7 @@ public class Flight
 	}
 	@Override
 	public String toString() {
-		return "Flight [flightNo=" + flightNo + ", carrierName=" + carrierName + ", flightModel=" + flightModel
+		return "Flight [flightNo=" + flightNo + ", carrierName=" + carrierName //+ ", flightModel=" + flightModel
 				+ ", seatCapacity=" + seatCapacity + "]";
 	}
 	
